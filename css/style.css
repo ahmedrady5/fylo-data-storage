@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  max-height: 100vh;
+  background-color: #0c122c;
+}
+.main {
+  position: relative;
+  background-image: url(../images/bg-desktop.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 300px auto;
+}
+@media (max-width: 767px) {
+  .main {
+    flex-direction: column;
+    background-image: url(../images/bg-mobile.png);
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+}
+.fylo {
+  position: relative;
+  bottom: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+  background-color: #1e2c69;
+  width: 260px;
+  height: 150px;
+  padding: 30px;
+  border-radius: 8px 80px 8px 8px;
+}
+@media (max-width: 767px) {
+  .fylo {
+    width: calc(100% - 40px);
+    height: 200px;
+    margin: 0 0 -30px;
+    padding: 30px;
+  }
+}
+.fylo .image img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .fylo .image img {
+    width: 180px;
+  }
+}
+.fylo .icons {
+  display: flex;
+  align-items: center;
+}
+.fylo .icon img {
+  padding: 8px 8px;
+  background-color: #0b122b;
+  width: 35px;
+  height: 33px;
+  margin-right: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .fylo .icon img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin-left: 10px;
+  }
+}
+.fylo .icons .icon:first-of-type img {
+  width: 30px;
+}
+@media (max-width: 767px) {
+  .fylo .icons .icon:first-of-type img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+}
+.info {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  background-color: #1e2c69;
+  bottom: 50px;
+  border-radius: 8px;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .info {
+    width: calc(100% - 40px);
+    height: 160px;
+    padding: 30px;
+  }
+}
+.top {
+  position: relative;
+}
+.information {
+  position: relative;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .information {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.information > div {
+  font-size: 13px;
+  color: #99a4da;
+}
+.information > div span {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.information > div span:nth-child(2) {
+  position: absolute;
+  top: 3px;
+}
+.information > div span:last-child {
+  margin-left: 10px;
+}
+.style {
+  position: relative;
+  height: 10px;
+  background-color: #0b122b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .style {
+    height: 16px;
+    border-radius: 8px;
+    width: 250px;
+    margin: 0 auto 15px;
+  }
+}
+.style > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, #ff9e96, #fb4d92);
+  border-radius: 4px;
+}
+.style > span::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  top: 1px;
+  right: 1px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+}
+@media (max-width: 767px) {
+  .style > span::before {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    right: 2px;
+  }
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  padding: 10px 16px;
+  top: -50px;
+  right: 0;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .left {
+    padding: 16px 50px;
+    top: 90px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+.left::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-width: 14px;
+  border-style: solid;
+  bottom: -10px;
+  right: 0;
+  border-right-color: white;
+}
+@media (max-width: 767px) {
+  .left::before {
+    display: none;
+  }
+}
+.left span:first-child,
+.left span:nth-child(2) {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .left span:first-child,
+  .left span:nth-child(2) {
+    font-size: 40px;
+  }
+}
+.left span:nth-child(2) {
+  margin-bottom: -5px;
+}
+.left span:last-child {
+  font-size: 10px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  color: #9c9ba0;
+}
+@media (max-width: 767px) {
+  .left span:last-child {
+    font-size: 12px;
+    margin-left: 10px;
+    width:max-content;
+  }
+}
+.bottom {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .bottom {
+      width: 250px;
+      margin: auto;
+  }
+}
+.bottom div {
+  font-size: 10px;
+}
+.bottom div span {
+  font-size: 11px;
+  margin-left: 2px;
+}
